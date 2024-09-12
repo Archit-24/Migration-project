@@ -29,6 +29,11 @@ jobs:
         run: |
           pip install dbt-snowflake  # Replace with your required adapter (e.g., dbt-bigquery, dbt-redshift)
 
+      # Install dbt-databricks
+      - name: Install dbt
+        run: |
+          pip install dbt-databricks
+
       # Set up the dbt profiles.yml
       - name: Set up dbt profiles.yml
         run: |
