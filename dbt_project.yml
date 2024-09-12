@@ -1,0 +1,23 @@
+name: 'migration_project'
+version: '1.0.0'
+
+profile: 'migration_project'
+
+model-paths: ["models/migration"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  migration_project:
+    +schema: archit
+    silver:
+      description: "Cleaned and transformed data from the bronze table."
+    gold:
+      description: "Business-ready data for reporting and analytics."

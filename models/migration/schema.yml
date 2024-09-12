@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: archit
+    tables:
+      - name: online_retail_ii
+models:
+  - name: bronze
+    description: "Raw data loaded from DBFS."
+  - name: silver
+    description: "Cleaned and transformed data from the bronze table."
+  - name: gold
+    description: "Business-ready data for reporting and analytics."

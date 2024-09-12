@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('archit', 'online_retail_ii') }}
