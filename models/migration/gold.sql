@@ -11,7 +11,7 @@ WITH silver AS (
     FROM {{ ref('silver') }}  -- Reference the silver table
     WHERE Country = 'United Kingdom'
       AND Quantity > 0       -- Filter for valid quantities
-      AND Price > 0          -- Filter for valid prices
+      AND Price < 10000          -- Filter for valid prices
 ),
 gold_data AS (
     SELECT 

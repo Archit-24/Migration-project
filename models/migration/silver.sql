@@ -14,7 +14,7 @@ silver_table AS (
     FROM raw_data
     WHERE Country = 'United Kingdom'  -- Filter by Country
       AND Quantity > 0                -- Filter negative values
-      AND Price > 0                   -- Filter negative values
+      AND Price < 5000                   -- Filter negative values
 )
 
 SELECT * FROM silver_table;
